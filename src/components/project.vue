@@ -54,7 +54,7 @@
           </div>
         </a>
         <div class="project-details">
-          <h2>Commande de desserts</h2>
+          <h2>Product list with card</h2>
           <p class="project-tech">HTML • CSS • JS</p>
           <p>Réalisation d'une page web qui simule une commande de desserts.</p>
         </div>
