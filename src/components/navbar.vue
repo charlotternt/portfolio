@@ -1,7 +1,11 @@
 <template>
   <div class="navbar">
-    <img src="../assets/terminal.svg" class="logo" />
-    <a href="mailto:charlotterenault3@gmail.com"><img src="../assets/mail.svg" class="icon"/></a>
+    <a href="#home">Accueil</a>
+    <a href="#stack">À propos</a>
+    <a href="#about">Compétences</a>
+    <a href="#projects">Réalisations</a>
+    <a href="#experience">Expérience </a>
+    <a href="#social">Contact</a>
   </div>
 </template>
 
@@ -13,22 +17,30 @@ export default {
 
 <style>
 .navbar {
-  width: 95%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
-  padding: 10px 20px; 
-  box-sizing: border-box; 
-}
-
-.navbar img {
-  max-width: 100px; 
-  height: auto;
+  box-sizing: border-box;
+  background-color: #6540ca;
 }
 
 .navbar a {
-  color: #6540ca;
+  color: #c9b8f5;
+  font-size: 18px;
   text-decoration: none;
   font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar a.router-link-active {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid #ffffff;
 }
 </style>
