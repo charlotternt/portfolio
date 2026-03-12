@@ -50,7 +50,7 @@
               alt="ecommerce"
               class="picture"
             />
-            <div class="text">Commande de desserts</div>
+            <div class="text">Product list with card</div>
           </div>
         </a>
         <div class="project-details">
@@ -91,15 +91,15 @@ export default {
 
 <style>
 .container {
-  padding: 100px 50px;
+  padding: 80px 20px;
 }
 
 .projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  justify-items: center;
+  gap: 40px;
   margin-top: 50px;
+  justify-items: center;
 }
 
 .project {
@@ -107,19 +107,20 @@ export default {
   flex-direction: column;
   align-items: center;
   max-width: 350px;
+  width: 100%;
 }
 
 .picture {
-  width: 350px;
-  height: 220px;
+  width: 100%;
+  height: auto;
   border-radius: 5%;
   transition: 0.3s ease;
 }
 
 .overlay {
   position: relative;
-  width: 350px;
-  height: 220px;
+  width: 100%;
+  aspect-ratio: 16 / 10;
   border-radius: 5%;
   overflow: hidden;
 }

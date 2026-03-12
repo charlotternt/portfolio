@@ -1,17 +1,31 @@
 <template>
   <div class="navbar">
-    <a href="#home">Accueil</a>
-    <a href="#stack">À propos</a>
-    <a href="#about">Compétences</a>
-    <a href="#projects">Réalisations</a>
-    <a href="#experience">Expérience </a>
-    <a href="#social">Contact</a>
+    <div class="menu-toggle" @click="toggleMenu">☰</div>
+
+    <div class="links" :class="{ active: isOpen }">
+      <a href="#home">Accueil</a>
+      <a href="#stack">À propos</a>
+      <a href="#about">Compétences</a>
+      <a href="#projects">Réalisations</a>
+      <a href="#experience">Expérience</a>
+      <a href="#social">Contact</a>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "Navbar_",
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isOpen = !this.isOpen;
+    },
+  },
 };
 </script>
 
@@ -19,10 +33,16 @@ export default {
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
-  box-sizing: border-box;
   background-color: #6540ca;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
 }
 
 .navbar a {
@@ -39,8 +59,30 @@ export default {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.navbar a.router-link-active {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-bottom: 2px solid #ffffff;
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #c9b8f5;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #6540ca;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+  }
+
+  .links.active {
+    display: flex;
+  }
 }
 </style>
