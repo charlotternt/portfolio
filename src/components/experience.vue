@@ -4,7 +4,7 @@
 
     <p>
       <strong>Développeuse web en alternance</strong><br />
-      Entreprise HelloCSE – 2022 à 2023.
+      HelloCSE à lyon – 2022 à 2023.
     </p>
 
     <p>
